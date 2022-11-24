@@ -1,0 +1,17 @@
+footer{
+    padding-top: 15px;
+    background-color: #212529;
+    color: #838588;
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+.footer__content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__content h1{
+    font-size: 20px;
+    font-weight: 600;
+}

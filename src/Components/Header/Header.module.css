@@ -1,0 +1,12 @@
+.header {
+    padding-top: 15px;
+    background-color: #212529;
+    color: #838588;
+
+}
+
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}

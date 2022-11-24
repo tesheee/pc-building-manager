@@ -1,14 +1,23 @@
-import './App.css';
+import React from "react";
 
-import NavBar from "./Components/NavBar";
-
+import {Header, Footer} from "./Components";
+import {EmptyCart, Home, Cart, Category} from "./Pages";
+import {Route, Routes} from "react-router-dom";
 
 function App() {
   return (
-    <>
-    <NavBar />
-    </>
-  );
-}
+      <>
+    <Header/>
+  <main>
+    <Routes>
+      <Route path="/EmptyCart" element={<EmptyCart/>}/>
+      <Route path="/Cart" element={<Cart/>}/>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/Category" element={<Category/>}/>
+    </Routes>
+  </main>
+  <Footer/>
+      </>
+)}
 
 export default App;
