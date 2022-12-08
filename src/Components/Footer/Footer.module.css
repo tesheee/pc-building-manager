@@ -15,3 +15,11 @@ footer{
     font-size: 20px;
     font-weight: 600;
 }
+
+.social__network__icons a{
+    padding-right: 5px;
+}
+
+.social__network__icons a:hover{
+    color: #838588;
+}

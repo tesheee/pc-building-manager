@@ -1,29 +1,43 @@
 import React from "react";
 import { Categories } from "../Components";
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion';
+
+const mainBlockAnimation = {
+    hidden: {
+        y: 30,
+        opacity: 0.2,
+    },
+    visible: {
+        y: 0,
+        opacity: 1,
+    }
+}
 
 function Home(){
     return(
         <>
-            <div className="container">
+            <motion.div className="container" initial="hidden" whileInView="visible">
                 <div className="mainpage-top-grid">
-                    <Categories items={[
-                        ['Видеокарты', 'GPU'],
-                        ['Процессоры', 'CPU'],
-                        ['Материнские платы', 'Motherboards'],
-                        ['Оперативная память', 'RAM'],
-                        ['Блоки питания', 'PSU'],
-                        ['Охлаждение', 'Cooling'],
-                        ['Hdd', 'HDD'],
-                        ['SSD', 'SDD'],
-                        ['Корпуса', 'Cases']      
-                    ]}/>
+                    <motion.div variants={mainBlockAnimation} className="mainpage-category-menu">
+                        <Categories items={[
+                            ['Видеокарты', 'GPU'],
+                            ['Процессоры', 'CPU'],
+                            ['Материнские платы', 'Motherboards'],
+                            ['Оперативная память', 'RAM'],
+                            ['Блоки питания', 'PSU'],
+                            ['Охлаждение', 'Cooling'],
+                            ['Hdd', 'HDD'],
+                            ['SSD', 'SDD'],
+                            ['Корпуса', 'Cases']      
+                        ]}/>
+                     </motion.div>
                     <div className="mainpage-configurator-grid">
-                        <div className="mainpage-configurator">
+                        <motion.div variants={mainBlockAnimation} transition={{ delay: 0.02 }} className="mainpage-configurator">
                             <img id="category-img-swapper"
                                  src="https://media.cdn.sapphiretech.com.cn/-/media/sites/sapphire/pim/product-images/11308_01_rx6900xt_nitro_16ggddr6/11308_01_rx6900xt_nitro_16gbgddr6_c02_800x500.ashx"
                                  draggable="false"/>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
                 <div className="mainpage-bot-grid">
@@ -45,7 +59,7 @@ function Home(){
                         <Link to="/">Создать собственную сборку</Link>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </>
     );}
 
