@@ -1,8 +1,12 @@
 import React from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMagnifyingGlass, faXmark} from "@fortawesome/free-solid-svg-icons";
+import { SearchContext } from "../../App";
 
-function Search({ searchValue, setSearchValue }){
+function Search(){
+
+    const { searchValue, setSearchValue } = React.useContext(SearchContext);
+
     return (
         <div className="nav-search">
         <form className="nav-search-form">

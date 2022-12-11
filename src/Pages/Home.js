@@ -47,16 +47,16 @@ function Home(){
                     <div className="mainpage-bot-block-center">
                         <h3>Готовые сборки</h3>
                         <ul>
-                            <li><Link to="/">Игровая</Link></li>
-                            <li><Link to="/">Для работы</Link></li>
-                            <li><Link to="/">Для офиса</Link></li>
-                            <li><Link to="/">Для Доты</Link></li>
-                            <li><Link to="/">Для Танков</Link></li>
+                            <li><Link to="/Develop">Игровая</Link></li>
+                            <li><Link to="/Develop">Для работы</Link></li>
+                            <li><Link to="/Develop">Для офиса</Link></li>
+                            <li><Link to="/Develop">Для Доты</Link></li>
+                            <li><Link to="/Develop">Для Танков</Link></li>
                         </ul>
                     </div>
                     <div className="mainpage-bot-block-right">
                         <h3>Попробуйте!</h3>
-                        <Link to="/">Создать собственную сборку</Link>
+                        <Link to="/Develop">Создать собственную сборку</Link>
                     </div>
                 </div>
             </motion.div>

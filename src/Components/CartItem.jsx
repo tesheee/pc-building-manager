@@ -1,13 +1,22 @@
 import React, {useState, useEffect} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faSquare, faSquareCheck} from "@fortawesome/free-solid-svg-icons";
+import { faSquare, faSquareCheck } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch } from "react-redux";
 
-function CartItem({ item, deleteProduct, active }){
-    const {id, pic, name, price} = item;
+import { removeItem } from '../redux/slices/cartSlice'
+
+function CartItem({ item, active }){
+    const dispatch = useDispatch();
+
+    const {id, pic, title, price} = item;
 
     const [checkboxActive, setCheckboxActive] = useState(true);
 
     useEffect(() => setCheckboxActive(!checkboxActive), [active])
+
+    const onCLickDelete = () => {
+        dispatch(removeItem(id))
+    }
 
     return(
     <>
@@ -18,11 +27,11 @@ function CartItem({ item, deleteProduct, active }){
                     <FontAwesomeIcon icon={checkboxActive ? faSquareCheck : faSquare} onClick={() => setCheckboxActive(!checkboxActive)}/>
                 </div>
                 <div className="cart-item__img">
-                    <img src={pic} alt={name} draggable="false"/>
+                    <img src={pic} alt={title} draggable="false"/>
                 </div>
                 <div className="cart-item__title">
-                    <a>{name}</a>
-                    <span onClick={() => {deleteProduct(id);}}>Удалить</span>
+                    <a>{title}</a>
+                    <span onClick={onCLickDelete}>Удалить</span>
                 </div>
                     <div className="cart-item__price">
                         <p>{price}₽</p>

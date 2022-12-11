@@ -1,9 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-export default function NavItemCount( {count} ) {
-    const a = count;
+export default function NavItemCount() {
+    const { items } = useSelector(state => state.cart);
     return(
-        <div className={a > 0 ? 'nav-item-count':'nav-item-count hide'}>
-            {a}
+        <div className={items.length > 0 ? 'nav-item-count':'nav-item-count hide'}>
+            {items.length}
         </div>
 )}

@@ -7,7 +7,7 @@ import ModalLogin from "../ModalLogin";
 import headerStyles from "./Header.module.css";
 import Search from "./Search";
 
-function Header({ searchValue, setSearchValue }){
+function Header(){
     const [modalActive, setModalActive] = useState(false);
 
     return (
@@ -15,7 +15,7 @@ function Header({ searchValue, setSearchValue }){
             <div className="container">
                 <div className={headerStyles.header__nav}>
                     <Link to="/" className={headerStyles.logo}>Хагенти</Link>
-                    <Search searchValue={searchValue} setSearchValue={setSearchValue}/>
+                    <Search/>
                     <nav className={headerStyles.nav}>
                         <ul className={headerStyles.nav__list}>
                             <li className="nav-item">
@@ -23,12 +23,11 @@ function Header({ searchValue, setSearchValue }){
                                 {modalActive && <ModalLogin state={() => setModalActive(!modalActive)}/>}
                             </li>
                             <li className="nav-item">
-                                <NavItemCount></NavItemCount>
                                 <FontAwesomeIcon className="nav-item-icon" icon={faHeart}/>
                                 <Link to={"/"} className="nav-link">Избранное</Link>
                             </li>
                             <li className="nav-item">
-                                <NavItemCount count={4}></NavItemCount>
+                                <NavItemCount/>
                                 <FontAwesomeIcon className="nav-item-icon" icon={faCartShopping}/>
                                 <Link to={"/Cart"} className="nav-link">Корзина</Link>
                             </li>
