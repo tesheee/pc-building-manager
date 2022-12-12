@@ -10,9 +10,9 @@ function CartItem({ item, active }){
 
     const {id, pic, title, price} = item;
 
-    const [checkboxActive, setCheckboxActive] = useState(true);
+    //const [checkboxActive, setCheckboxActive] = useState(true);
 
-    useEffect(() => setCheckboxActive(!checkboxActive), [active])
+    //useEffect(() => setCheckboxActive(!checkboxActive), [active])
 
     const onCLickDelete = () => {
         dispatch(removeItem(id))
@@ -23,9 +23,9 @@ function CartItem({ item, active }){
         <div className="cart-item">
             {
                 <div className="cart-item-content">
-                <div className="cart-item__checkbox">
+                {/*<div className="cart-item__checkbox">
                     <FontAwesomeIcon icon={checkboxActive ? faSquareCheck : faSquare} onClick={() => setCheckboxActive(!checkboxActive)}/>
-                </div>
+                </div>*/}
                 <div className="cart-item__img">
                     <img src={pic} alt={title} draggable="false"/>
                 </div>

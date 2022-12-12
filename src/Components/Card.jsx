@@ -26,7 +26,6 @@ function Card({ id, pic, title, price, count }) {
                 <p>{price}₽</p>
                 <a onClick={onCLickAdd} className="category-content__item__button">Купить</a>
             </div>
-            
         </div>
     )}
 

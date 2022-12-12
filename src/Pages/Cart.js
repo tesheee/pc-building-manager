@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { CartItem } from "../Components";
+import { CartItem, EmptyCart } from "../Components";
 
 function Cart() {
     const { totalCount, totalPrice, items } = useSelector(state => state.cart);
+
+    /*if(!totalPrice){
+        return <EmptyCart/>
+    }*/
 
     return(
         <div className="container">
@@ -24,7 +28,7 @@ function Cart() {
                     <div className="cart-content-side-block">
                         <div className="order-details">
                             <h3>Детали заказа</h3>
-                            <div className="order-details-item"><p>{totalCount}. {totalCount > 1 ? "Товара" : totalCount == 0 ? "Ничего не выбрано" : "Товар"}</p><p>{totalPrice}₽</p></div>
+                            <div className="order-details-item"><p>{totalCount}. {totalCount > 1 & totalCount < 5 ? "Товара" : totalCount > 5 ? "Товаров" : totalCount == 0 ? "Ничего не выбрано" : "Товар"}</p><p>{totalPrice}₽</p></div>
                             <div className="order-details-item sum"><p>Сумма</p><p>{totalPrice}₽</p></div>
                         </div>
                         <a href="/">Оформить заказ</a>

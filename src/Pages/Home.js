@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Categories } from "../Components";
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
+import data from "../data";
 
 const mainBlockAnimation = {
     hidden: {
@@ -15,6 +16,15 @@ const mainBlockAnimation = {
 }
 
 function Home(){
+
+    const [width, setWidth] = useState(0);
+    const carousel = useRef();
+
+    useEffect(() => {
+        setWidth((carousel.current.scrollWidth - carousel.current.offsetWidth));
+    }, [])
+    
+
     return(
         <>
             <motion.div className="container" initial="hidden" whileInView="visible">
@@ -40,25 +50,75 @@ function Home(){
                         </motion.div>
                     </div>
                 </div>
-                <div className="mainpage-bot-grid">
+                <h3 className="title">Популярные товары</h3>
+                <motion.div ref={carousel} whileTap={{cursor: "grabbing"}} className="carousel">
+                <motion.div drag={"x"} dragConstraints={{right: 0, left: -width}}  className="mainpage-bot-flex">
                     <div className="mainpage-bot-block-left">
-                        <h2>Конфигуратор ПК</h2>
+                        <a>RTX 3080</a>
+                        <img src="https://static.gigabyte.com/StaticFile/Image/Global/303d4516244d408a66af70a74dfb8fe6/Product/26166"/>
+                        <div className="category-content__buy__block">
+                            <p>100115₽</p>
+                            <a className="category-content__item__button">Купить</a>
+                        </div>
                     </div>
-                    <div className="mainpage-bot-block-center">
-                        <h3>Готовые сборки</h3>
-                        <ul>
-                            <li><Link to="/Develop">Игровая</Link></li>
-                            <li><Link to="/Develop">Для работы</Link></li>
-                            <li><Link to="/Develop">Для офиса</Link></li>
-                            <li><Link to="/Develop">Для Доты</Link></li>
-                            <li><Link to="/Develop">Для Танков</Link></li>
-                        </ul>
+                    <div className="mainpage-bot-block-left">
+                        <a>Ryzen 9 5900x</a>
+                        <img src="https://www.amd.com/system/files/2022-11/1761310-amd-ryzen-9-7000-series-PIB-angle-1260x709.png"/>
+                        <div className="category-content__buy__block">
+                            <p>50115₽</p>
+                            <a className="category-content__item__button">Купить</a>
+                        </div>
                     </div>
-                    <div className="mainpage-bot-block-right">
-                        <h3>Попробуйте!</h3>
-                        <Link to="/Develop">Создать собственную сборку</Link>
+                    <div className="mainpage-bot-block-left">
+                        <a>Z790 AORUS</a>
+                        <img src="https://www.gigabyte.com/Image/1179b2ed6a06bb7f43bd798c948ebf92/Product/32318/webp/1000"/>
+                        <div className="category-content__buy__block">
+                            <p>100115₽</p>
+                            <a className="category-content__item__button">Купить</a>
+                        </div>
                     </div>
-                </div>
+                    <div className="mainpage-bot-block-left">
+                        <a>Rtx 3080</a>
+                        <img src="https://static.gigabyte.com/StaticFile/Image/Global/303d4516244d408a66af70a74dfb8fe6/Product/26166"/>
+                        <div className="category-content__buy__block">
+                            <p>100115₽</p>
+                            <a className="category-content__item__button">Купить</a>
+                        </div>
+                    </div>
+                    <div className="mainpage-bot-block-left">
+                        <a>Rtx 3080</a>
+                        <img src="https://static.gigabyte.com/StaticFile/Image/Global/303d4516244d408a66af70a74dfb8fe6/Product/26166"/>
+                        <div className="category-content__buy__block">
+                            <p>100115₽</p>
+                            <a className="category-content__item__button">Купить</a>
+                        </div>
+                    </div>
+                    <div className="mainpage-bot-block-left">
+                        <a>Rtx 3080</a>
+                        <img src="https://static.gigabyte.com/StaticFile/Image/Global/303d4516244d408a66af70a74dfb8fe6/Product/26166"/>
+                        <div className="category-content__buy__block">
+                            <p>100115₽</p>
+                            <a className="category-content__item__button">Купить</a>
+                        </div>
+                    </div>
+                    <div className="mainpage-bot-block-left">
+                        <a>Rtx 3080</a>
+                        <img src="https://static.gigabyte.com/StaticFile/Image/Global/303d4516244d408a66af70a74dfb8fe6/Product/26166"/>
+                        <div className="category-content__buy__block">
+                            <p>100115₽</p>
+                            <a className="category-content__item__button">Купить</a>
+                        </div>
+                    </div>
+                    <div className="mainpage-bot-block-left">
+                        <a>Rtx 3080</a>
+                        <img src="https://static.gigabyte.com/StaticFile/Image/Global/303d4516244d408a66af70a74dfb8fe6/Product/26166"/>
+                        <div className="category-content__buy__block">
+                            <p>100115₽</p>
+                            <a className="category-content__item__button">Купить</a>
+                        </div>
+                    </div>
+                </motion.div>
+                </motion.div>
             </motion.div>
         </>
     );}

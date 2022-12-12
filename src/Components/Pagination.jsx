@@ -9,7 +9,7 @@ function Pagination(){
             nextLabel=">"
             className="pagination"
             onPageChange={event => console.log(event)}
-            pageRangeDisplayed={8}
+            pageRangeDisplayed={2}
             pageCount={4}
             previousLabel="<"
             renderOnZeroPageCount={null}
