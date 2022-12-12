@@ -669,3 +669,34 @@ details > summary {
         margin-right: 30px;
     }
 }
+
+@media (max-width: 412px){
+    .mainpage-top-grid 
+    {
+        grid-template-columns: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .mainpage-configurator img {
+        height: 268px;
+        width: 468px;
+    }
+    .mainpage-category-menu {
+        margin-bottom: 30px;
+    }
+    .search {
+        width: 100%;
+    }
+    /*.search-markX__icon{
+        margin: -42px 295px;
+        height: 50px;
+        width: 20px;
+    }
+    .search-icon {
+        margin: -42px 320px;
+        height: 50px;
+        width: 20px;
+
+    }*/
+}
+
