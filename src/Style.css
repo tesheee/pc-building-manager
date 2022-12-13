@@ -659,6 +659,32 @@ details > summary {
     color: var(--corporate-green);
 }
 
+footer{
+    padding-top: 15px;
+    background-color: #212529;
+    color: #838588;
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+.footer__content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__content h1{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.social__network__icons a{
+    padding-right: 5px;
+}
+
+.social__network__icons a:hover{
+    color: #838588;
+}
+
 @media (min-width: 834px) and (max-width: 1228px) {
     .mainpage-top-grid 
     {
@@ -678,14 +704,17 @@ details > summary {
         flex-direction: column;
     }
     .mainpage-configurator img {
-        height: 268px;
-        width: 468px;
+        height: 228px;
+        width: 448px;
     }
     .mainpage-category-menu {
         margin-bottom: 30px;
     }
     .search {
         width: 100%;
+    }
+    .footer__content{
+        display: grid;
     }
     /*.search-markX__icon{
         margin: -42px 295px;
