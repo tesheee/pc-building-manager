@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCartShopping, faHeart, faMagnifyingGlass, faUser} from "@fortawesome/free-solid-svg-icons";
+import {faCartShopping, faHeart, faUser} from "@fortawesome/free-solid-svg-icons";
 import NavItemCount from "../NavItemCount";
 import { Link } from "react-router-dom";
 import ModalLogin from "../ModalLogin";

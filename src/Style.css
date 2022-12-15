@@ -198,7 +198,6 @@ main{
 .mainpage-category-menu{
     display: grid;
     padding: 15px;
-    min-height: 50px;
     max-height: 470px;
     background: #212529;
     border: solid var(--block-border-color) 1px;
@@ -236,6 +235,7 @@ main{
 }
 
 .mainpage-category-menu h1{
+    padding: 0 15px;
     margin: 0 -1px 10px;
     font-size: 24px;
     color: #57d75b;
@@ -685,57 +685,6 @@ footer{
     color: #838588;
 }
 
-.category-menu-header{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 15px;
-    margin-top: 5px;
-}
-
-.menu-btn {
-    transform: scale(0);
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    position: relative;
-    margin-top: 5px;
-  }
-  .menu-btn span,
-  .menu-btn span::before,
-  .menu-btn span::after {
-    position: absolute;
-    top: 50%; margin-top: -1px;
-    left: 50%; margin-left: -10px;
-    width: 20px;
-    height: 2px;
-    background-color: #fff;
-  }
-  .menu-btn span::before,
-  .menu-btn span::after {
-    content: '';
-    display: block;
-    transition: 0.2s;
-  }
-.menu-btn span::before {
-    transform: translateY(-6px);
-  }
-.menu-btn span::after {
-    transform: translateY(6px);
-  }
-
-.menu-btn_active span{
-    background-color: transparent;
-}
-  
-.menu-btn_active span:before {
-    transform: rotate(-45deg);
-    width: 20px;
-  }
-.menu-btn_active span:after {
-    transform: rotate(45deg);
-    width: 20px;
-}
-
 @media (min-width: 834px) and (max-width: 1228px) {
     .mainpage-top-grid 
     {
@@ -767,9 +716,6 @@ footer{
     .footer__content{
         display: grid;
     }
-    .menu-btn{
-        transform: scale(1);
-    }
     /*.search-markX__icon{
         margin: -42px 295px;
         height: 50px;
@@ -779,5 +725,7 @@ footer{
         margin: -42px 320px;
         height: 50px;
         width: 20px;
+
     }*/
 }
+
