@@ -716,6 +716,28 @@ footer{
     .footer__content{
         display: grid;
     }
+    .menu-btn{
+        transform: scale(1);
+    }
+    .logo{
+        margin-top: 2px;
+    }
+    .header__nav{
+        display: grid;
+        row-gap: 20px;
+        justify-content: stretch;
+    }
+    .nav{
+        position: absolute;
+        right: 30px;
+        top: 19px;
+    }
+    .nav-link{
+        font-size: 0;
+    }
+    .nav-item-icon{
+        margin-right: 0;
+    }
     /*.search-markX__icon{
         margin: -42px 295px;
         height: 50px;
