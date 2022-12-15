@@ -126,6 +126,36 @@ main{
     color: var(--main-grey-color);
 }
 
+.header {
+    padding-top: 15px;
+    background-color: #212529;
+    color: #838588;
+}
+
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.logo{
+    font-weight: 600;
+    font-size: 24px;
+    color: #57d75b;
+}
+
+.nav{
+    align-items: center;
+}
+
+.nav__list{
+    display: flex;
+    column-gap: 40px;
+    font-weight: 550;
+    font-size: 14px;
+    padding-top: 8px;
+}
+
 .modal{
     position: absolute;
     z-index: 1;
