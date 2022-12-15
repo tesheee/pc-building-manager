@@ -719,7 +719,6 @@ footer{
 .category-menu-header{
     display: flex;
     justify-content: space-between;
-    padding: 0 15px;
     margin-top: 5px;
 }
 
