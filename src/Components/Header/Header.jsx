@@ -13,7 +13,7 @@ function Header(){
         <header className="header">
             <div className="container">
                 <div className="header__nav">
-                    <Link to="/" className={"logo"}>Хагенти</Link>
+                    <Link to="/" className={"logo"}>Hagenti</Link>
                     <Search/>
                     <nav className="nav">
                         <ul className="nav__list">
