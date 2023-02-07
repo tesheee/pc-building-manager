@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect } from "react";
 import { Categories } from "../Components";
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
-import data from "../data";
 
 const mainBlockAnimation = {
     hidden: {
@@ -30,12 +29,12 @@ function Home(){
                 <div className="mainpage-top-grid">
                     <motion.div variants={mainBlockAnimation} className="mainpage-category-menu">
                         <div className="category-menu-header"> 
-                            <h1>Категории</h1>
-                            <a href="#" className={categories ? "menu-btn" : "menu-btn menu-btn_active"} onClick={() => (setCategories(!categories))}>
+                            <h1>Каталог</h1>
+                            <a className={categories ? "menu-btn" : "menu-btn menu-btn_active"} onClick={() => (setCategories(!categories))}>
                             <span></span>
                             </a>
                         </div>
-                        <motion.div className={categories ? "wrapper hide" : "wrapper"}>
+                        <div className={categories ? "wrapper hide" : "wrapper"}>
                             <Categories items={[
                                 ['Видеокарты', 'GPU'],
                                 ['Процессоры', 'CPU'],
@@ -47,7 +46,7 @@ function Home(){
                                 ['SSD', 'SDD'],
                                 ['Корпуса', 'Cases']      
                                 ]}/>
-                        </motion.div>
+                        </div>
                      </motion.div>
                     <div className="mainpage-configurator-grid">
                         <motion.div variants={mainBlockAnimation} transition={{ delay: 0.02 }} className="mainpage-configurator">

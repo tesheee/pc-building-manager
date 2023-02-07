@@ -1,5 +1,6 @@
 import React from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faTelegram, faVk } from "@fortawesome/free-brands-svg-icons"
 import footerStyles from "./Footer.module.css";
 
 
@@ -13,8 +14,8 @@ function Footer(){
                         <p>+79996667536</p>
                         <h1>Cоц. сети</h1>
                         <div className={"social__network__icons"}>
-                            <a></a>
-                            <a href="https://vk.com/id473606599"></a>
+                            <a><FontAwesomeIcon icon={faTelegram} size={"2x"}/></a>
+                            <a href="https://vk.com/id473606599"><FontAwesomeIcon icon={faVk} size={"2x"}/></a>
                         </div>
                     </div>
                     <div className="copyright"><p>Copyright © GlekTeam.com, 2022</p></div>

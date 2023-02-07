@@ -23,3 +23,9 @@ footer{
 .social__network__icons a:hover{
     color: #838588;
 }
+
+@media (max-width: 412px){
+    .footer__content{
+        display: grid;
+    }
+}
