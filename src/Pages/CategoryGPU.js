@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import axios from 'axios';
 import { Card, Pagination, Sort } from "../Components";
 import { SearchContext } from "../App";
 import { useDispatch, useSelector } from "react-redux";
 import Skeleton from "../Components/ItemBlock/Skeleton"
+import axios from "axios";
 
 function CategoryGPU() {
     const [items, setItems] = useState([]);
