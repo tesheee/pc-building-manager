@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Header, Footer } from "./Components";
-import { Home, Cart, CategoryGPU, Test, Develop, Configurator } from "./Pages";
+import { Home, Cart, CategoryGPU, Test, Develop, Configurator, ProductPage } from "./Pages";
 import { Route, Routes } from "react-router-dom";
 
 export const SearchContext = React.createContext();
@@ -22,6 +22,7 @@ function App() {
               <Route path="/Test" element={<Test/>}/>
               <Route path="/Develop" element={<Develop/>}/>
               <Route path="/Configurator" element={<Configurator/>}/>
+              <Route path="/Category/ProductPage" element={<ProductPage/>}/>
             </Routes>
           </main>
         <Footer/>

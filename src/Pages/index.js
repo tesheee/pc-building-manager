@@ -4,3 +4,4 @@ export { default as CategoryGPU } from "./CategoryGPU";
 export { default as Test } from "./Test";
 export { default as Develop } from "./Develop";
 export { default as Configurator } from "./Configurator";
+export { default as ProductPage } from "./ProductPage"

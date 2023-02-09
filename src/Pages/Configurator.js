@@ -6,7 +6,7 @@ function Develop() {
         <div className="container">
             <div className="develop">
                 <h1>Страница находится в разработке</h1>
-                <Link to={"/"} и>Вернуться назад</Link>
+                <Link to={"/"}>Вернуться назад</Link>
             </div>
         </div>
     );}

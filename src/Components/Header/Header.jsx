@@ -14,7 +14,7 @@ function Header(){
             <div className="container">
                 <div className="header__nav">
                     <Link to="/" className={"logo"}>Hagenti</Link>
-                    <Link to="/" className="nav__button">Конфигуратор ПК</Link>
+                    <Link to="/Configurator" className="nav__button">Конфигуратор ПК</Link>
                     <Search/>
                     <nav className="nav">
                         <ul className="nav__list">
