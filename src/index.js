@@ -8,7 +8,7 @@ import App from './App';
 import store from './redux/store'
 
 import "./Reset.css";
-import "./Style.css";
+import "./Style.scss";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

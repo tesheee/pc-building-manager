@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 import { addItem } from '../redux/slices/cartSlice'
 
-function Card({ id, pic, title, price, count, category }) {
+function Card({ id, pic, title, price, count }) {
     const dispatch = useDispatch();
 
     const onCLickAdd = () => {
@@ -21,7 +21,7 @@ function Card({ id, pic, title, price, count, category }) {
     return(
         <div className="category-content__item">
             <img src={pic} draggable="false"/>
-            <Link to={"/Category/" + category + "/" + title}>{title}</Link>
+            <Link to={"/Category/GPU" + "/" + title}>{title}</Link>
             <div className="category-content__buy__block">
                 <p>{price}₽</p>
                 <a onClick={onCLickAdd} className="category-content__item__button">Купить</a>

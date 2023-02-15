@@ -1,4 +1,5 @@
 import { useState, React } from "react";
+import { Link } from "react-router-dom";
 
 function ModalLogin({state, handleClick}) {
     const [email, setEmail] = useState('');
@@ -18,6 +19,7 @@ function ModalLogin({state, handleClick}) {
                         onChange={(e) => setPass(e.target.value)}/>
                         <button className="green__button" onClick={()=>handleClick(email, pass)}>Продолжить</button>
                     </form>
+                    <p className="pad-t-15">Нет аккаунта? <Link to="/Register" onClick={e => e.target.stopPropagation()}>Регистрация</Link></p>
                 </div>
             </div>
         </>

@@ -28,7 +28,7 @@ function Cart() {
                     <div className="cart-content-side-block">
                         <div className="order-details">
                             <h3>Детали заказа</h3>
-                            <div className="order-details-item"><p>{totalCount}. {totalCount > 1 & totalCount < 5 ? "Товара" : totalCount > 5 ? "Товаров" : totalCount == 0 ? "Ничего не выбрано" : "Товар"}</p><p>{totalPrice}₽</p></div>
+                            <div className="order-details-item"><p>{totalCount}. {totalCount > 1 & totalCount < 5 ? "Товара" : totalCount > 4 ? "Товаров" : totalCount == 0 ? "Ничего не выбрано" : "Товар"}</p><p>{totalPrice}₽</p></div>
                             <div className="order-details-item sum"><p>Сумма</p><p>{totalPrice}₽</p></div>
                         </div>
                         <a href="/">Оформить заказ</a>

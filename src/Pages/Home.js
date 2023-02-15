@@ -2,6 +2,8 @@ import React, { useRef, useState, useEffect } from "react";
 import { Categories } from "../Components";
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const mainBlockAnimation = {
     hidden: {
@@ -50,6 +52,12 @@ function Home(){
                      </motion.div>
                     <div className="mainpage-configurator-grid">
                         <motion.div variants={mainBlockAnimation} transition={{ delay: 0.02 }} className="mainpage-configurator">
+                            <img id="category-img-swapper"
+                                 src="https://media.cdn.sapphiretech.com.cn/-/media/sites/sapphire/pim/product-images/11308_01_rx6900xt_nitro_16ggddr6/11308_01_rx6900xt_nitro_16gbgddr6_c02_800x500.ashx"
+                                 draggable="false"/>
+                            <img id="category-img-swapper"
+                                 src="https://media.cdn.sapphiretech.com.cn/-/media/sites/sapphire/pim/product-images/11308_01_rx6900xt_nitro_16ggddr6/11308_01_rx6900xt_nitro_16gbgddr6_c02_800x500.ashx"
+                                 draggable="false"/>
                             <img id="category-img-swapper"
                                  src="https://media.cdn.sapphiretech.com.cn/-/media/sites/sapphire/pim/product-images/11308_01_rx6900xt_nitro_16ggddr6/11308_01_rx6900xt_nitro_16gbgddr6_c02_800x500.ashx"
                                  draggable="false"/>
