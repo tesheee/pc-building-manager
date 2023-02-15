@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+//import axios from "axios";
 import { Card, Pagination, Sort, Filters } from "../Components";
 import { SearchContext } from "../App";
 import { useDispatch, useSelector } from "react-redux";
@@ -24,7 +24,7 @@ function Category() {
         console.log(order);
         //const search = searchValue ? `&search=${searchValue}` : '';
 
-        try {
+        /*try {
             const res = await axios.get(
                 `https://6395a92790ac47c680703bcd.mockapi.io/GPU?page=${currentPage}&limit=4&sortBy=${sortBy}&order=${order}`
             );
@@ -33,7 +33,7 @@ function Category() {
             console.log('ERROR: ', error);
         } finally {
             setIsLoading(false);
-        }
+        }*/
 
         window.scrollTo(0, 0);
     }
