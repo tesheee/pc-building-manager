@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping, faGear, faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
+import { FiShoppingCart, FiUser } from 'react-icons/fi';
+import { AiOutlineHeart } from 'react-icons/ai';
+import { RxGear } from 'react-icons/rx';
 import NavItemCount from "../NavItemCount";
 import { Link } from "react-router-dom";
 import ModalLogin from "../ModalLogin";
-import Search from "./Search";
+import Search from "./Search/Search";
+import headerStyles from "./Header.module.scss";
 
 function Header(){
     const [modalActive, setModalActive] = useState(false);
@@ -12,28 +14,29 @@ function Header(){
     return (
         <header>
             <div className="container">
-                <div className="header__nav">
-                    <Link to="/" className={"logo"}>Hagenti</Link>
-                    <Link to="/Configurator" className="nav__button">Конфигуратор ПК <FontAwesomeIcon className="pad-l-5" icon={faGear}/></Link>
+                <div className={headerStyles.header__nav}>
+                    <Link to="/" className={headerStyles.logo}>Hagenti</Link>
+                    <Link to="/Configurator" className={headerStyles.nav__button}><span>Конфигуратор ПК</span></Link>
                     <Search/>
-                    <ul className="nav__list">
+                    <ul className={headerStyles.nav__list}>
                         <li>
-                            <a className="nav-item" onClick={() => setModalActive(!modalActive)}>
-                                <FontAwesomeIcon icon={faUser} size={"lg"}/>
+                            <a className={headerStyles.nav__item} onClick={() => setModalActive(!modalActive)}>
+                                <FiUser/>
                                 {modalActive && <ModalLogin state={() => setModalActive(!modalActive)}/>}
+                                {/*Создать способ вытягивания имени активного пользователя*/}
                                 Вадим
                             </a>
                         </li>
                         <li >
-                            <Link to={"/"} className="nav-item">
-                                <FontAwesomeIcon className="nav-item-icon" icon={faHeart} size={"lg"}/>
+                            <Link to={"/"} className={headerStyles.nav__item}>
+                                <AiOutlineHeart className="nav-item-icon"/>
                                 Избранное
                             </Link>
                         </li>
                         <li>
                             <NavItemCount/>
-                            <Link to={"/Cart"} className="nav-item">
-                                <FontAwesomeIcon className="nav-item-icon" icon={faCartShopping} size={"lg"}/>
+                            <Link to={"/Cart"} className={headerStyles.nav__item}>
+                                <FiShoppingCart className="nav-item-icon"/>
                                 Корзина
                             </Link>
                         </li>

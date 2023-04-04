@@ -6,3 +6,4 @@ export { default as Develop } from "./Develop";
 export { default as Configurator } from "./Configurator";
 export { default as ProductPage } from "./ProductPage";
 export { default as Register } from "./Register";
+export { default as Favorite } from "./Favorite";

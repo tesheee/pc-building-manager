@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSquare, faSquareCheck } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 
 import { removeItem } from '../redux/slices/cartSlice'
+import { Link } from "react-router-dom";
 
 function CartItem({ item, active }){
     const dispatch = useDispatch();
 
-    const {id, pic, title, price} = item;
+    const {id, pic, name, price} = item;
 
     //const [checkboxActive, setCheckboxActive] = useState(true);
 
@@ -27,14 +26,14 @@ function CartItem({ item, active }){
                     <FontAwesomeIcon icon={checkboxActive ? faSquareCheck : faSquare} onClick={() => setCheckboxActive(!checkboxActive)}/>
                 </div>*/}
                 <div className="cart-item__img">
-                    <img src={pic} alt={title} draggable="false"/>
+                    <img src={pic} alt={name} draggable="false"/>
                 </div>
                 <div className="cart-item__title">
-                    <a>{title}</a>
+                    <Link to={"/Category/GPU" + "/" + id}>{name}</Link>
                     <span onClick={onCLickDelete}>Удалить</span>
                 </div>
                     <div className="cart-item__price">
-                        <p>{price}₽</p>
+                        <p>{price.toLocaleString()}₽</p>
                     </div>
                 </div>
             }

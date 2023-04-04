@@ -5,11 +5,17 @@ function ModalLogin({state, handleClick}) {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
 
+    //<div className="modal-content" onClick={e => e.stopPropagation()}></div>
+
+    const closeModalWindow = () => {
+        
+    }
+
     return(
         <>
             <div className="modal active" onClick={state}>
                 <div className="modal-content" onClick={e => e.stopPropagation()}>
-                    <h2>Вход или регистрация</h2>
+                    <h2>Вход</h2>
                     <form>
                         <input type="email" className="inputText" placeholder="Email" 
                         value={email}

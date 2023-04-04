@@ -1,12 +1,12 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Categories({ items }) {
     return(
         <>
             {
-                items.map((name, index) => <div className="category-menu-item active" key={`${name}_${index}`}>
-                    <Link to={"/Category/" + name[1]}>{name[0]}</Link>
+                items.map((item, index) => <div className="category-menu-item active" key={`${item.name}_${index}`}>
+                    <Link to={"/Category/" + item.url}>{item.name}</Link>
                 </div>)
             }
         </>
